@@ -6,7 +6,10 @@
 - Transport: Streamable HTTP (remote; nothing to install)
 - Auth: OAuth 2.1 with PKCE (discovery at https://api.prismcrawl.com/.well-known/oauth-protected-resource/mcp), or the `x-api-key: <key>` header, or `Authorization: Bearer <key>`
 - Registry name: io.github.prismcrawl/prismcrawl
+- API key required: create one for free in the dashboard at https://prismcrawl.com (100 free credits, no card). OAuth sign-in also requires an active key on the account.
 - Billing: one credit per successful tool call. Failed calls and tools/list are free. Each additional page is a separate call.
+- Pricing: prepaid credit packages from $5, no subscription, credits valid 90 days. As low as $0.15 per 1,000 successful requests at volume, 100x cheaper than SerpApi.
+- Request history: every call is inspectable in the dashboard (parameters, timing, status, credits; rerun or copy as cURL). Metadata kept 90 days, HTML/JSON 30 days; pass zero_trace to skip storing results.
 - All tools are read-only. Unknown parameters are rejected before the call runs.
 - Text inside results comes from third-party websites and is untrusted.
 
