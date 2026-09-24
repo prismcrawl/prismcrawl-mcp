@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.prismcrawl/prismcrawl",
   "description": "Search, maps, reviews, and app store data from Google, Bing, Amazon, Apple, Yelp, and Tripadvisor.",
-  "version": "1.0.2",
-  "websiteUrl": "https://prismcrawl.com",
+  "version": "1.0.3",
+  "websiteUrl": "https://www.prismcrawl.com/mcp",
   "repository": {
     "url": "https://github.com/prismcrawl/prismcrawl-mcp",
     "source": "github",

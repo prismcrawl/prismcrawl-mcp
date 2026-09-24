@@ -1,6 +1,6 @@
 # PrismCrawl MCP Server
 
-Connect Claude, Cursor, and other MCP clients to [PrismCrawl](https://prismcrawl.com): live search results, AI answers, products, places, and reviews returned as structured JSON.
+Connect Claude, Cursor, and other MCP clients to [PrismCrawl](https://www.prismcrawl.com): live search results, AI answers, products, places, and reviews returned as structured JSON. See the [MCP server page](https://www.prismcrawl.com/mcp) for an overview.
 
 PrismCrawl runs this server for you. You don't install anything; you point your MCP client at the endpoint below.
 
@@ -12,10 +12,10 @@ https://api.prismcrawl.com/mcp
 |---|---|
 | Transport | Streamable HTTP |
 | Authentication | OAuth 2.1, or an API key in the `x-api-key` header |
-| Registry name | `io.github.prismcrawl/prismcrawl` ([listing](https://registry.modelcontextprotocol.io/v0/servers?search=prismcrawl)) |
+| Registry name | `io.github.prismcrawl/prismcrawl` ([listing](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.prismcrawl%2Fprismcrawl/versions/latest)) |
 | Tools | Read-only search, maps, reviews, and app store tools ([full list](docs/tools.md)) |
 
-> **You need a PrismCrawl API key.** Sign up at [prismcrawl.com](https://prismcrawl.com) and create a key in the dashboard. It's free, and you don't need a card. You need the key whether you connect with OAuth or pass it in a header.
+> **You need a PrismCrawl API key.** Sign up at [prismcrawl.com](https://www.prismcrawl.com) and create a key in the dashboard. It's free, and you don't need a card. You need the key whether you connect with OAuth or pass it in a header.
 >
 > **Pricing:** at volume, prepaid credit packages bring the price as low as **$0.15 per 1,000 successful requests**, and failed requests are free. That's **100x cheaper than SerpApi**. See [pricing](#pricing).
 
@@ -42,7 +42,7 @@ https://api.prismcrawl.com/mcp
 
 ## Quick start
 
-1. Create a free account at [prismcrawl.com](https://prismcrawl.com) and create an API key in the dashboard. New accounts get 100 credits, and you don't need a card.
+1. Create a free account at [prismcrawl.com](https://www.prismcrawl.com) and create an API key in the dashboard. New accounts get 100 credits, and you don't need a card.
 2. Add the server to your client:
 
    **Claude Code**
@@ -75,7 +75,7 @@ Each successful tool call uses one PrismCrawl credit. Failed calls are free, and
 - As low as $0.15 per 1,000 successful requests at volume, 100x cheaper than SerpApi
 - Credits are valid for 90 days
 
-See [prismcrawl.com](https://prismcrawl.com) for current pricing.
+See [prismcrawl.com](https://www.prismcrawl.com) for current pricing.
 
 ## Documentation
 
@@ -83,7 +83,7 @@ See [prismcrawl.com](https://prismcrawl.com) for current pricing.
 - [Authentication](docs/authentication.md): OAuth, API keys, and revoking access
 - [Example prompts and calls](docs/examples.md)
 - [llms.txt](llms.txt): a short summary for AI agents
-- [REST API docs](https://prismcrawl.com/docs): the same data over plain HTTP
+- [REST API docs](https://www.prismcrawl.com/docs): the same data over plain HTTP
 
 ## Support
 
