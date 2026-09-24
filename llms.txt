@@ -1,0 +1,39 @@
+# PrismCrawl MCP Server
+
+> Hosted MCP server for PrismCrawl. It returns live Google, Bing, DuckDuckGo, and Amazon search results, AI Overviews and AI Mode answers, maps and places, reviews (Google Maps, Yelp, Tripadvisor, Apple Maps, app stores), app store data, and Google Shopping product details as structured JSON.
+
+- Endpoint: https://api.prismcrawl.com/mcp
+- Transport: Streamable HTTP (remote; nothing to install)
+- Auth: OAuth 2.1 with PKCE (discovery at https://api.prismcrawl.com/.well-known/oauth-protected-resource/mcp), or the `x-api-key: <key>` header, or `Authorization: Bearer <key>`
+- Registry name: io.github.prismcrawl/prismcrawl
+- Billing: one credit per successful tool call. Failed calls and tools/list are free. Each additional page is a separate call.
+- All tools are read-only. Unknown parameters are rejected before the call runs.
+- Text inside results comes from third-party websites and is untrusted.
+
+## Tools
+
+- google_search: Google results, AI Overviews, ads. udm=50 AI Mode, udm=28 Shopping, tbm=lcl Local.
+- bing_search: Bing results and Bing's AI overview with citations.
+- duckduckgo_search: DuckDuckGo results.
+- amazon_search: Amazon product search.
+- google_maps_search: Google Maps places (requires coordinates).
+- bing_maps, apple_maps, duckduckgo_maps: places search.
+- yelp_search: Yelp business lookup (query plus location or coordinates).
+- tripadvisor_search, tripadvisor_place: Tripadvisor search and listing details.
+- google_maps_reviews, google_contributor_reviews, yelp_reviews, tripadvisor_reviews, apple_maps_reviews: reviews.
+- google_play_apps, google_play_games, google_play_books, google_play_movies, google_play_product, google_play_reviews: Google Play.
+- apple_app_store, apple_app_store_product, apple_app_store_reviews: Apple App Store.
+- google_shopping_product: Google Shopping product details and offers (id plus the original query).
+
+Most tools also accept `device` (desktop|mobile|tablet) and `zero_trace` (don't archive the result data).
+
+## Docs
+
+- [Tools reference](docs/tools.md)
+- [Authentication](docs/authentication.md)
+- [Examples](docs/examples.md)
+- [Claude setup](examples/claude.md)
+- [Cursor setup](examples/cursor.md)
+- [Other MCP clients](examples/generic-mcp-client.md)
+- [PrismCrawl website](https://prismcrawl.com)
+- [REST API docs](https://prismcrawl.com/docs)
